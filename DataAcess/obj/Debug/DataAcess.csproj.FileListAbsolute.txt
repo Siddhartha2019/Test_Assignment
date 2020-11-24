@@ -1,0 +1,14 @@
+C:\Users\user_\source\repos\EmployeeSalary\DataAcess\bin\Debug\DataAcess.dll.config
+C:\Users\user_\source\repos\EmployeeSalary\DataAcess\bin\Debug\DataAcess.dll
+C:\Users\user_\source\repos\EmployeeSalary\DataAcess\bin\Debug\DataAcess.pdb
+C:\Users\user_\source\repos\EmployeeSalary\DataAcess\bin\Debug\EntityFramework.dll
+C:\Users\user_\source\repos\EmployeeSalary\DataAcess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user_\source\repos\EmployeeSalary\DataAcess\bin\Debug\EntityFramework.xml
+C:\Users\user_\source\repos\EmployeeSalary\DataAcess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user_\source\repos\EmployeeSalary\DataAcess\obj\Debug\DataAcess.csprojAssemblyReference.cache
+C:\Users\user_\source\repos\EmployeeSalary\DataAcess\obj\Debug\DataAcess.csproj.CoreCompileInputs.cache
+C:\Users\user_\source\repos\EmployeeSalary\DataAcess\obj\Debug\DataAcess.csproj.CopyComplete
+C:\Users\user_\source\repos\EmployeeSalary\DataAcess\obj\Debug\DataAcess.dll
+C:\Users\user_\source\repos\EmployeeSalary\DataAcess\obj\Debug\DataAcess.pdb
+C:\Users\user_\source\repos\EmployeeSalary\DataAcess\bin\Debug\ObjectLayer.dll
+C:\Users\user_\source\repos\EmployeeSalary\DataAcess\bin\Debug\ObjectLayer.pdb

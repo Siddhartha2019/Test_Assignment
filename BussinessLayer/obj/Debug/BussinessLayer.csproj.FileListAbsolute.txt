@@ -1,0 +1,15 @@
+C:\Users\user_\source\repos\EmployeeSalary\BussinessLayer\bin\Debug\BussinessLayer.dll
+C:\Users\user_\source\repos\EmployeeSalary\BussinessLayer\bin\Debug\BussinessLayer.pdb
+C:\Users\user_\source\repos\EmployeeSalary\BussinessLayer\bin\Debug\DataAcess.dll
+C:\Users\user_\source\repos\EmployeeSalary\BussinessLayer\bin\Debug\EntityFramework.dll
+C:\Users\user_\source\repos\EmployeeSalary\BussinessLayer\bin\Debug\DataAcess.pdb
+C:\Users\user_\source\repos\EmployeeSalary\BussinessLayer\bin\Debug\DataAcess.dll.config
+C:\Users\user_\source\repos\EmployeeSalary\BussinessLayer\bin\Debug\EntityFramework.xml
+C:\Users\user_\source\repos\EmployeeSalary\BussinessLayer\obj\Debug\BussinessLayer.csprojAssemblyReference.cache
+C:\Users\user_\source\repos\EmployeeSalary\BussinessLayer\obj\Debug\BussinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\user_\source\repos\EmployeeSalary\BussinessLayer\obj\Debug\BussinessLayer.csproj.CopyComplete
+C:\Users\user_\source\repos\EmployeeSalary\BussinessLayer\obj\Debug\BussinessLayer.dll
+C:\Users\user_\source\repos\EmployeeSalary\BussinessLayer\obj\Debug\BussinessLayer.pdb
+C:\Users\user_\source\repos\EmployeeSalary\BussinessLayer\bin\Debug\BussinessLayer.dll.config
+C:\Users\user_\source\repos\EmployeeSalary\BussinessLayer\bin\Debug\ObjectLayer.dll
+C:\Users\user_\source\repos\EmployeeSalary\BussinessLayer\bin\Debug\ObjectLayer.pdb

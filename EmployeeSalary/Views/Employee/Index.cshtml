@@ -1,0 +1,54 @@
+﻿@model IEnumerable<EmployeeSalary.Models.Employee>
+ 
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Employee Info</title>
+</head>
+<body>
+    <div>
+        <table class="table table-bordered">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AnnualSalary)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.typename)
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnnualSalary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.typename)
+            </td>
+        </tr>
+            }
+
+        </table>
+    </div>
+</body>
+</html>
