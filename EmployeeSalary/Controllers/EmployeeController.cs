@@ -11,7 +11,7 @@ namespace EmployeeSalary.Controllers
     public class EmployeeController : Controller
     {
         // GET: Employee
-        public async Task<ActionResult> IndexAsync(int? id)
+        public async Task<ActionResult> Index(int? id)
         {
             IEnumerable<Employee> Employees = null;
             if (id == null)
@@ -19,7 +19,7 @@ namespace EmployeeSalary.Controllers
                 try
                 {
                     var client = new HttpClient();
-                   
+                    //client.Timeout = TimeSpan.FromMinutes(30);
                     client.BaseAddress = new Uri("http://localhost:44391/api/");
                     var responseTask = client.GetAsync("employeeservice");
                     await Task.WhenAll(responseTask);
@@ -43,19 +43,21 @@ namespace EmployeeSalary.Controllers
                     }
                 }
 
-                catch(AggregateException e)
+                catch (Exception ex)
                 {
-                    if (e.InnerException is OperationCanceledException)
+                    if (ex.InnerException is TimeoutException)
                     {
-
+                        ex = ex.InnerException;
                     }
-
+                    else if (ex is TaskCanceledException)
+                    {
+                        if ((ex as TaskCanceledException).CancellationToken == null || (ex as TaskCanceledException).CancellationToken.IsCancellationRequested == false)
+                        {
+                            ex = new TimeoutException("Timeout occurred");
+                        }
+                    }
+                    //Logger.Fatal(string.Format("Exception at calling {0} :{1}", url, ex.Message), ex);
                 }
-
-                catch (OperationCanceledException)
-                {
-                    //Request was cancelled
-                };
 
 
 
@@ -66,6 +68,7 @@ namespace EmployeeSalary.Controllers
                 try
                 {
                     var client = new HttpClient();
+                    //client.Timeout = TimeSpan.FromMinutes(30);
 
                     client.BaseAddress = new Uri("http://localhost:44391/api/");
                     var responseTask = client.GetAsync($"employeeservice/{id}");
@@ -89,21 +92,23 @@ namespace EmployeeSalary.Controllers
                         ModelState.AddModelError(string.Empty, "Server error. Please contact administrator.");
                     }
                 }
-
-                catch (AggregateException e)
+                 catch (Exception ex)
                 {
-                    if (e.InnerException is OperationCanceledException)
+                    if (ex.InnerException is TimeoutException)
                     {
-
+                        ex = ex.InnerException;
                     }
-
+                    else if (ex is TaskCanceledException)
+                    {
+                        if ((ex as TaskCanceledException).CancellationToken == null || (ex as TaskCanceledException).CancellationToken.IsCancellationRequested == false)
+                        {
+                            ex = new TimeoutException("Timeout occurred");
+                        }
+                    }
+                    //Logger.Fatal(string.Format("Exception at calling {0} :{1}", url, ex.Message), ex);
                 }
 
-                catch (OperationCanceledException)
-                {
-                    //Request was cancelled
-                };
-
+               
             }
             return View(Employees);
 
@@ -122,7 +127,7 @@ namespace EmployeeSalary.Controllers
         [HttpPost]
         public ActionResult getemployee(int ? pid)
         {
-            return RedirectToAction("IndexAsync", new { id=pid});
+            return RedirectToAction("Index", new { id=pid});
         }
 
 
